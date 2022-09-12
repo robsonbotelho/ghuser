@@ -1,0 +1,1 @@
+SELECT * FROM users WHERE programming_language = :lang;

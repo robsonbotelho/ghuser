@@ -1,0 +1,38 @@
+{
+  "name": "lovelystay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "sqltyper --database postgres://postgres:123456@localhost/github_users src/sql -t pg-promise",
+    "build": "rimraf ./bin && tsc && chmod 755 ./bin/index.js"
+  },
+  "bin": {
+    "ghuser": "./bin/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.7.15",
+    "@types/node-fetch": "^2.6.2",
+    "@types/ramda": "^0.28.15",
+    "@types/yargs": "^17.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "sqltyper": "^1.3.2",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "node-fetch": "^3.2.10",
+    "pg-promise": "^10.12.0",
+    "ramda": "^0.28.0",
+    "yargs": "^17.5.1"
+  }
+}
